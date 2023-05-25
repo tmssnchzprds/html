@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 geolocolizacion</title>
+</head>
+
+<body>
+
+
+<p id="demo">Picha en el boton para ver tu localizacion.</p>
+
+<input type="button" value="pulsa" onclick="getLocation()">Pincha
+
+<div id="mapholder"></div>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "La  geolocalizacion no esta soportada por el navegador.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+	alert(latlon);
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "El usuario ha denegado la geolocalizacion."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Informacion de geolocalizacion no disponible."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "Error desconocido."
+            break;
+    }
+}
+</script>
+
+</body>
+</html>

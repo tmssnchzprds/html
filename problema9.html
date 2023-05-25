@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problema 9. Formularios 4.</title>
+</head>
+
+<body>
+	<form name="formulario" action="recibe.asp" method="post">
+		<table border="1" align="center" width="80%">
+			<tr>
+				<th colspan="2">VOTO
+                </th>
+			</tr>
+			<tr>
+				<td>Nombre:
+                </td>
+				<td><input type="text" name="nombre">
+                </td>
+			</tr>
+			<tr>
+				<td>Voto:
+                </td>
+				<td>Excelente<input type="radio" name="voto" value="excelente" checked>
+<br>
+Muy Bueno<input type="radio" name="voto" value="muybueno">
+<br>
+Bueno<input type="radio" name="voto" value="bueno">
+<br>
+Regular<input type="radio" name="voto" value="regular">
+<br>
+Malo<input type="radio" name="voto" value="malo">
+                </td>
+			</tr>
+			<tr>
+				<td colspan="2"><center><input type="submit" name="boton" value="Enviar"></center>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>

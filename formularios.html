@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formularios, elementos nativos</title>
+</head>
+
+<body>
+Esto es un formulario:
+<br>
+<br>
+<form name="formulario" action="recibe.asp" method="get">
+Caja texto: <input type="text" name="caja" id="caja" size="15" maxlength="10" value="12345">
+<br>
+Listas desplegables de selección simple
+<select name="paises">
+	<option value="14">Alemania</option>
+    <option value="15">Suiza</option>
+	<option value="16" selected>España</option></select>
+    
+    Listas desplegables de selección multiple
+<select name="paisesMultiples" multiple>
+	<option value="14">Alemania</option>
+    <option value="15">Suiza</option>
+	<option value="16" selected>España</option></select>
+<br>
+TextAreas:
+<textarea name="observaciones" cols="40" rows="5">Hola don pepito....</textarea>
+<br>
+Contraseñas: <input type="password" name="password" size="15" maxlength="15">
+<br>
+Radio botones:
+Femenino:<input type="radio" name="sexo" value="femenino" checked>
+<br>
+Masculino<input type="radio" name="sexo" value="masculino">
+<br>
+Tipo checkbox:
+Que tienes:
+Coche: <input type="checkbox" name="vehiculo" value="coche">
+Moto: <input type="checkbox" name="vehiculo" value="Moto">
+Bicicleta: <input type="checkbox" name="vehiculo" value="Bicicleta">
+<br>
+<input type="submit" name="boton" value="Buscar">
+<br>
+<input type="button" name="Otroboton" value="Otro boton">
+<br>
+<input type="reset" name="buton" value="Limpiar">
+<br>
+<button>Buscar</button>
+</form>
+</body>
+</html>

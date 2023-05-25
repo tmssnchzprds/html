@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario2</title>
+</head>
+
+<body>
+	<form name="formulario2" action="recibe.asp" method="post">
+		<table border="1" align="center" width="80%">
+			<tr>
+				<th colspan="2">BUSCADOR DE PRODUCTOS:
+                </th>
+			</tr>
+			<tr>
+            	<td>Categorías:
+                </td>
+				<td><select name="categoria">
+						<option value="todas">Todas</option>
+   						<option value="embutidos">Embutidos</option>
+						<option value="dulces">Dulces</option>
+  					  	<option value="portatiles">Portátiles</option>
+						<option value="componentes">Componentes</option>
+   						<option value="televisores">Televisores</option>
+						<option value="telefonosmoviles">Teléfonos moviles</option>
+ 			        </select>
+                </td>
+			</tr>
+            <tr>
+				<td>Precio mínimo:
+                </td>
+				<td><input type="text" name="preciominimo" maxlength="4">
+                </td>
+			</tr>
+			<tr>
+				<td>Precio máximo:
+                </td>
+				<td><input type="text" name="preciomaximo" maxlength="4">
+                </td>
+			</tr>
+			<tr>
+				<td>Oferta:
+                </td>
+				<td>Si<input type="radio" name="oferta" value="si" checked>
+					<br>
+					No<input type="radio" name="oferta" value="no">
+                </td>
+			</tr>
+			<tr>
+				<td colspan="2"><center><input type="submit" name="boton" value="Enviar"> &nbsp;&nbsp;
+<input type="reset" name="buton" value="Deshacer"></center>
+                </td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

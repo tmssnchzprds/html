@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Novedades formularios HTML5</title>
+</head>
+
+<body>
+<form method="get" action="../recibe.php" name="formulario" id="formulario" autocomplete="no" enctype="multipart/form-data"><!--novalidate-->
+Etiqueta Number:
+<input type="number" min="5" max="10" step="2">
+<br>
+Etiqueta Rango:
+<input type="range" name="rango" min="1" max="20">
+<br>
+Etiqueta de tipo calendario:
+<input type="date" name="fecha" value="2016-10-24">
+<br>
+Etiqueta color:
+<input type="color" value="#FFFFOO">
+<br>
+Etiqueta Telefono:
+<input type="tel" name="telefono" required>
+<br>
+Etiqueta email:
+<input type="email" name="email" required autofocus>
+<br>
+Etiqueta time:
+<input type="time" name="hora" required>
+<br>
+Etiqueta week:
+<input type="week" name="semana">
+<br>
+Etiqueta date-time:
+<input type="datetime" name="fechayhora">
+<input type="datetime-local" name="fechayhoraactual">
+<br>
+Etiqueta URL:
+<input type="url" name="url" list="direcciones">
+
+<datalist id="direcciones">
+	<option value="http://google.es"></option>
+   	<option value="http://google.es"></option>
+	<option value="http://google.es">
+</option> 
+</datalist>
+<br>
+Etiqueta busqueda:
+<input type="search">
+<br>
+Nuevos Atributos a nivel de etiqueta:
+<input type="text" name="caja" size="20" pattern="[0-9]{8}[A-Z]{1}" placeholder="Introduzca aquí el dni" >
+<br>
+Seleccionar un archivo:
+<input type="file">
+<button> Enviar </button>
+</form>
+</body>
+</html>
